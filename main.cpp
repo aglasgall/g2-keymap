@@ -17,6 +17,10 @@ int compare_keycode_labels(const void *key, const void *elem) {
 }
 
 int main(int argc, char **argv) {
+  if(argc < 2) {
+    printf("usage: %s <kcm.bin file>\n",argv[0]);
+    return 1;
+  }
   KeyCharacterMap *map = KeyCharacterMap::try_file(argv[1]);
   printf("# of keys: %d\n",map->m_keyCount);
   for(int i = 0; i < map->m_keyCount; ++i) {
