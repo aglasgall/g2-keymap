@@ -28,7 +28,11 @@ int main(int argc, char **argv) {
     KeycodeLabel* label = (KeycodeLabel*)bsearch(&(key.keycode), KEYCODES,105,
                                   sizeof(KeycodeLabel),
                                   compare_keycode_labels);
-    printf("%s\t",label->literal);
+    if(label) {
+      printf("%s\t",label->literal);
+    } else {
+      printf("<UNKNOWN:%d>\t",key.keycode);
+    }
     for(int j = 0; j < META_MASK; ++j) {
       int keychar = key.data[j];
       if(isascii(keychar) && isgraph(keychar)) {
