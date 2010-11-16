@@ -1,6 +1,7 @@
-CFLAGS=-g
+CPPFLAGS=-g
 SOURCES=KeyCharacterMap.o main.o
 TARGET=dumpkeychars
+VERSION=0.2
 
 all: $(SOURCES) link
 
@@ -9,3 +10,6 @@ link:
 
 clean:
 	rm -f *.o $(TARGET)
+
+release:
+	zip g2-keymap-$(VERSION).zip vision-keypad.kl vision-keypad.kl.orig vision-keypad.kcm.bin vision-keypad.kcm.bin.orig
