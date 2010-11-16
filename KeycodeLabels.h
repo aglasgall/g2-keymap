@@ -128,7 +128,8 @@ static const KeycodeLabel KEYCODES[] = {
     { "FUNC_7", 103 },
     { "FUNC_8", 104 },
     { "QUECHAR", 105 },
-    {"BTN_MOUSE",106},
+    { "BTN_MOUSE", 106 },
+
     // NOTE: If you add a new keycode here you must also add it to:
     //   (enum KeyCode, in this file)
     //   frameworks/base/core/java/android/view/KeyEvent.java
@@ -238,16 +239,6 @@ typedef enum KeyCode {
     kKeyCodeUser3 = 94,
     kKeyCodeUser4 = 95,
     kKeyCodeUser5 = 96,
-    kKeyCodeFunc1 = 97,
-    kKeyCodeFunc2 = 98,
-    kKeyCodeFunc3 = 99,
-    kKeyCodeFunc4 = 100,
-    kKeyCodeFunc5 = 101,
-    kKeyCodeFunc6 = 102,
-    kKeyCodeFunc7 = 103,
-    kKeyCodeFunc8 = 104,
-    kKeyCodeQuechar = 105,
-    kKeyCodeBtnMouse = 106
 } KeyCode;
 
 static const KeycodeLabel FLAGS[] = {
